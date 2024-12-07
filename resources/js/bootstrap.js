@@ -7,3 +7,5 @@ import $ from 'jquery';
 window.$ = window.jQuery = $;
 
 import './ck-loader';
+
+import './fouc-fix';
