@@ -1,0 +1,27 @@
+services:
+  blogavel:
+    image: blogavel:latest
+    container_name: blogavel
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+    ports:
+      - "80:80"
+    environment:
+      APP_KEY: 
+      APP_TIMEZONE: UTC
+      APP_URL: 
+
+      DB_CONNECTION: mysql
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_DATABASE: blogavel
+      DB_USERNAME: admin
+      DB_PASSWORD: 
+
+      MINIO_KEY: blogavel
+      MINIO_SECRET: 
+      MINIO_BUCKET: blogavel
+      MINIO_ENDPOINT: <public-endpoint>
